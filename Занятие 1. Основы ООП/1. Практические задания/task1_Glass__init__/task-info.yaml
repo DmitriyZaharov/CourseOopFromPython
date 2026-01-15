@@ -28,7 +28,7 @@ files:
                   self.occupied_volume = occupied_volume  # объем жидкости в стакане
         selected: false
         status: Failed
-      - offset: 503
+      - offset: 520
         length: 60
         placeholder_text: "# TODO инициализировать два объекта от класса Стакан (Glass)"
         initial_state:
@@ -40,7 +40,7 @@ files:
               glass2 = Glass(200, 150)
         selected: false
         status: Failed
-      - offset: 582
+      - offset: 599
         length: 50
         placeholder_text: "...  # TODO инициализировать не корректные объекты"
         initial_state:
@@ -64,5 +64,5 @@ status: Failed
 feedback:
   message: "TypeError not raised : Параметр capacity_volume должен проходить прове\
     рку на тип. Только int или float"
-  time: "Thu, 15 Jan 2026 07:23:53 UTC"
+  time: "Thu, 15 Jan 2026 10:46:48 UTC"
 record: -1
