@@ -11,7 +11,6 @@ class Glass:
 
         # TODO создайте атрибут capacity_volume и occupied_volume Обязательно проверяйте типы (TypeError) и значения передаваемых аргументов (ValueError)
 
-
 if __name__ == "__main__":
     # TODO инициализировать два объекта от класса Стакан (Glass)
 
