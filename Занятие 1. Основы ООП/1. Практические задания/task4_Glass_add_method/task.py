@@ -25,21 +25,34 @@ class Glass:
 
     def add_water(self, volume):
         ...  # TODO Допишите метод. Не забываем про проверки
+        if not isinstance(volume, (int, float)):
+            raise TypeError
+        if volume < 0:
+            raise ValueError("Значение параметра должно быть >= 0")
+        if self.occupied_volume + volume > self.capacity_volume:
+            raise ValueError("Общее количество воды больше объема стакана")
+        self.occupied_volume += volume
 
     def remove_water(self, volume):
         ...  # TODO Допишите метод. Не забываем про проверки
-
+        if not isinstance(volume, (int, float)):
+            raise TypeError
+        if volume < 0:
+            raise ValueError("Значение параметра должно быть >= 0")
+        if self.occupied_volume - volume < 0:
+            raise ValueError("Количество вылитой воды больше исходного")
+        self.occupied_volume -= volume
 
 if __name__ == "__main__":
     glass = Glass(200, 100)
 
     # TODO Добавьте 50 единиц воды через метод
-
+    glass.add_water(50)
     assert glass.occupied_volume == 150  # проверка правильности добавления воды
     print(glass.occupied_volume)
 
     # TODO  Отлейте 100 единиц воды из стакана при помощи метода
-
+    glass.remove_water(100)
     assert glass.occupied_volume == 50  # проверка правильности отливания воды
     print(glass.occupied_volume)
 
