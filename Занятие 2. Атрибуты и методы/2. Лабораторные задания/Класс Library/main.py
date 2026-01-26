@@ -12,7 +12,6 @@ BOOKS_DATABASE = [
     }
 ]
 
-
 # TODO Импортируйте и скопируйте ранее написанный класс Book
 class Book:
     def __init__(self, id_: int, name: str, pages: int):
@@ -116,7 +115,7 @@ if __name__ == '__main__':
 
     print(library_with_books.get_index_by_book_id(1))  # проверяем индекс книги с id = 1
 
-    # Пример 3: Попытка найти несуществующую книгу
+    # Попытка найти несуществующую книгу
     # try:
     #     library_with_books.get_index_by_book_id(10)
     # except ValueError as e:
