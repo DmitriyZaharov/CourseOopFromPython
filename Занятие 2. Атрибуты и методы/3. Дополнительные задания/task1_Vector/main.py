@@ -11,13 +11,15 @@ class Vector:
 
     def __sub__(self, other):
         ... # TODO реализуйте вычитание
+        return Vector(self.x - other.x, self.y - other.y)
 
     def __mul__(self, other):
         ... # TODO реализуйте умножение
+        return Vector(self.x * other.x, self.y * other.y)
 
     def __truediv__(self, other):
         ... # TODO реализуйте деление
-
+        return Vector(self.x / other.x, self.y / other.y)
 
 if __name__ == "__main__":
     v1 = Vector(2, 1)

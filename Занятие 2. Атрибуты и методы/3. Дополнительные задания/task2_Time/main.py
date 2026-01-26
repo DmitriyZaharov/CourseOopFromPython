@@ -11,10 +11,11 @@ class Time:
 
     def __lt__(self, other):
         ...  # TODO реализуйте проверку "меньше"
+        return (self.hour, self.minute) < (other.hour, other.minute)
 
     def __le__(self, other):
         ...  # TODO реализуйте проверку "меньше или равно"
-
+        return (self.hour, self.minute) <= (other.hour, other.minute)
 
 if __name__ == "__main__":
     time1 = Time(14, 30)
