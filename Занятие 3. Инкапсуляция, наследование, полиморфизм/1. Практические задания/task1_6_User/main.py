@@ -3,7 +3,7 @@ class User:
         self.username = username
         # TODO создайте приватные атрибуты для пароля и адреса
         self.__password = password
-        self._address = address
+        self.__address = address
 
     @staticmethod
     def check_permission(role: str) -> bool:
