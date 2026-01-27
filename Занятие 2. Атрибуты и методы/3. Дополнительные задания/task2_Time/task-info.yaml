@@ -12,17 +12,17 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: "return (self.hour, self.minute) < (other.hour, other.minute)"
         selected: false
-        status: Unchecked
-      - offset: 409
-        length: 50
+        status: Solved
+      - offset: 371
+        length: 19
         placeholder_text: "...  # TODO реализуйте проверку \"меньше или равно\""
         initial_state:
           length: 50
-          offset: 409
+          offset: 478
         initialized_from_dependency: false
         encrypted_possible_answer: "return (self.hour, self.minute) <= (other.hour, other.minute)"
         selected: false
-        status: Unchecked
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -33,5 +33,8 @@ files:
   - name: tests/input.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 26 Jan 2026 06:39:55 UTC"
 record: -1

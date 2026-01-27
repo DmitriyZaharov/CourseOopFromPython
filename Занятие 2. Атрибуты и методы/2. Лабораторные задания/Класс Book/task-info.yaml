@@ -18,7 +18,7 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: pass
         selected: false
-        status: Unchecked
+        status: Solved
       - offset: 341
         length: 26
         placeholder_text: "pass # TODO дописать метод"
@@ -28,7 +28,7 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: pass
         selected: false
-        status: Unchecked
+        status: Solved
       - offset: 401
         length: 26
         placeholder_text: "pass # TODO дописать метод"
@@ -38,7 +38,10 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: pass
         selected: false
-        status: Unchecked
+        status: Solved
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 26 Jan 2026 06:24:35 UTC"
 record: -1

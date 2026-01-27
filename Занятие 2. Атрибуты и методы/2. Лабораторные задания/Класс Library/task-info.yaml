@@ -9,44 +9,44 @@ files:
   - name: main.py
     visible: true
     placeholders:
-      - offset: 220
-        length: 60
+      - offset: 218
+        length: 1
         placeholder_text: "# TODO Импортируйте и скопируйте ранее написанный класс Book"
         initial_state:
-          length: 60
-          offset: 220
+          length: 61
+          offset: 218
         initialized_from_dependency: false
         encrypted_possible_answer: |-
           class Book:
               ...
         selected: false
         status: Unchecked
-      - offset: 586
-        length: 26
+      - offset: 219
+        length: 0
         placeholder_text: "pass # TODO дописать метод"
         initial_state:
           length: 26
-          offset: 586
+          offset: 585
         initialized_from_dependency: false
         encrypted_possible_answer: pass
         selected: false
         status: Unchecked
-      - offset: 840
-        length: 26
+      - offset: 219
+        length: 0
         placeholder_text: "pass # TODO дописать метод"
         initial_state:
           length: 26
-          offset: 840
+          offset: 839
         initialized_from_dependency: false
         encrypted_possible_answer: pass
         selected: false
         status: Unchecked
-      - offset: 1280
-        length: 26
+      - offset: 219
+        length: 0
         placeholder_text: "pass # TODO дописать метод"
         initial_state:
           length: 26
-          offset: 1280
+          offset: 1279
         initialized_from_dependency: false
         encrypted_possible_answer: pass
         selected: false
