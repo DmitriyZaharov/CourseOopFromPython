@@ -13,18 +13,18 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: print(self.__dict__)
         selected: false
-        status: Unchecked
+        status: Solved
       - offset: 363
         length: 70
         placeholder_text: "# TODO Распечатайте словарь атрибутов экземпляра класса в к\
       онце метода"
         initial_state:
           length: 70
-          offset: 363
+          offset: 420
         initialized_from_dependency: false
         encrypted_possible_answer: print(self.__dict__)
         selected: false
-        status: Unchecked
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -32,5 +32,8 @@ files:
   - name: tests/output.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 22 Jan 2026 10:02:18 UTC"
 record: -1
