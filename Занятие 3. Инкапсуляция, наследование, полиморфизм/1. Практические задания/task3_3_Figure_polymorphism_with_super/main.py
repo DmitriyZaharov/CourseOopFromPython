@@ -11,13 +11,13 @@ class Rectangle:
 
 class RectangleFoot(Rectangle):
     """ Производный класс. Прямоугольник в футах """
-    FOOT_IN_METERS = 0.3048  # столько метров в один футе
+    FOOT_IN_METERS = 0.3048  # столько метров в одном футе
 
     def area(self):
         """ Переводим площадь в футы. """
         area = ...  # TODO c помощью super вызвать метод area базового класса
+        area = super().area()
         return area / (self.FOOT_IN_METERS ** 2)
-
 
 if __name__ == "__main__":
     rect = Rectangle(5, 10)
