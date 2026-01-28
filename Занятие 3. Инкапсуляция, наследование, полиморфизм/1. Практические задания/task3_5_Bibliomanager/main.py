@@ -1,6 +1,5 @@
 import datetime
 import json
-import re
 
 
 class LibraryItem:
@@ -131,6 +130,7 @@ class Book(LibraryItem):
     def get_info(self):
         return f"Книга: '{self.title}', Автор: {self.author}, Жанр: {self.genre}, Год издания: {self.publication_year}"
 
+
 class Magazine(LibraryItem):
     """
     Класс для журналов
@@ -140,10 +140,11 @@ class Magazine(LibraryItem):
         """
         issue_number - Номер выпуска
         """
-        ... # TODO Инициализируйте переменные от LibraryItem и добавьте новый приватный атрибут issue_number. Не забудьте, что нужна валидация перед записью
+        ...  # TODO Инициализируйте переменные от LibraryItem и добавьте новый приватный атрибут issue_number.
+        # Не забудьте, что нужна валидация перед записью
         self.__validate_issue_number(issue_number)
         self.__issue_number = issue_number
-        super().__init__(title = title, publication_year = publication_year)
+        super().__init__(title=title, publication_year=publication_year)
 
     @staticmethod
     def __validate_issue_number(issue_number: int):
@@ -163,16 +164,18 @@ class Magazine(LibraryItem):
     def get_info(self):
         return f"Журнал: '{self.title}', Номер выпуска: {self.issue_number}, Год издания: {self.publication_year}"
 
+
 class Newspaper(LibraryItem):
     """
     Класс для газет
     """
+    ...  # TODO Инициализируйте переменные от LibraryItem и добавьте новый приватный атрибут publication_date.
+    # Не забудьте, что нужна валидация перед записью
 
-    ... # TODO Инициализируйте переменные от LibraryItem и добавьте новый приватный атрибут publication_date. Не забудьте, что нужна валидация перед записью
-    def __int__(self, title, publication_year, publication_date):
-        super().__init__(title = title, publication_year = publication_year)
-        self.__validate_publication_date(publication_date)
+    def __init__(self, title, publication_year, publication_date):
+        super().__init__(title=title, publication_year=publication_year)
         self.__validate_date_format(publication_date)
+        self.__validate_publication_date(publication_date)
         self.__publication_date = publication_date
 
     @staticmethod
@@ -217,7 +220,7 @@ class Newspaper(LibraryItem):
 
             # Пробуем создать объект даты - если дата некорректна, будет ошибка
             # Например, 31.02.2020 или 32.01.2020
-            datetime(year=year, month=month, day=day)
+            datetime.date(year=year, month=month, day=day)
 
             # Если дошли сюда, значит дата корректна
             return True
@@ -230,7 +233,7 @@ class Newspaper(LibraryItem):
     def __validate_publication_date(publication_date: str) -> tuple[bool, str]:
         """
         Проверка на соответствие типу str, иначе ошибка TypeError
-        Правильного формата разделения (день, месяц, и год должны быт разделены точкой '.', как пример: 01.01.2020)
+        Правильного формата разделения (день, месяц, и год должны быт разделены точкой '.' как пример: 01.01.2020)
         Проверка, что вообще дата существует в календаре (можно использовать datetime.date(day=1, month=1, year=2020),
             если не будет ошибок значит дата корректная)
         """
@@ -280,17 +283,19 @@ class Newspaper(LibraryItem):
             return False, "День должен быть положительным числом"
 
         try:
-            datetime(year=year, month=month, day=day)
+            datetime.date(year=year, month=month, day=day)
             return True, ""
         except ValueError as e:
             return False, f"Некорректная дата: {str(e)}"
+
 
     # TODO добавьте свойство publication_date (на чтение)
     @property
     def publication_date(self):
         return self.__publication_date
 
-    # TODO  переопределите метод get_info, чтобы он отображал информацию специфичную для газеты (Газета: 'Название газеты',  Дата выпуска: 'Дата', Год издания: 'Год')
+    # TODO  переопределите метод get_info, чтобы он отображал информацию специфичную для газеты
+    #  (Газета: 'Название газеты',  Дата выпуска: 'Дата', Год издания: 'Год')
     def get_info(self):
         return f"Газета: '{self.title}', Дата выпуска: {self.publication_date}, Год издания: {self.publication_year}"
 
