@@ -1,6 +1,6 @@
 class Counter:
-    def __init__(self, max_value: int):
-        self._value = 0
+    def __init__(self, max_value: int, value = 0):
+        self._value = value
         self._max_value = max_value
 
     def increment(self) -> None:

@@ -1,3 +1,6 @@
+from typing import final
+
+
 class BankAccount:
     """
     Базовый класс для банковского счета
@@ -41,6 +44,10 @@ class SavingsAccount(BankAccount):
         Например, если процентная ставка 5%, то передается значение 0.05
         """
         ...  # TODO реализуйте метод
+        if rate <= 0:
+            raise ValueError("Процентная ставка должна быть больше или равной нулю")
+        interest = self.get_balance() * rate
+        self.deposit(interest)
 
 
 class CheckingAccount(BankAccount):
@@ -54,7 +61,11 @@ class CheckingAccount(BankAccount):
         amount - сумма для вывода
         """
         ...  # TODO Реализуйте метод
-
+        term = amount * self.__commission
+        final_amount = amount + term
+        if not final_amount <= self.get_balance():
+            print("Недостаточно средств для вывода наличных")
+        self._set_balance(self.get_balance() - final_amount)
 
 if __name__ == "__main__":
     # Пример использования
